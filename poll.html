@@ -1,0 +1,161 @@
+<html>
+
+<head>
+	<title>Poll For Truth</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		var yes = new Array();
+		yes = [2, 6, 8, 3];
+		var no = new Array();
+		no = [7, 18, 1, 5];
+		var num;
+		var flag = [true, true, true, true];
+
+		class opinion {
+			noPer(num) {
+				if (flag[num] == true) {
+					no[num]++;
+					switch (num) {
+						case 0: document.getElementById("n0").innerHTML = no[0]; break;
+						case 1: document.getElementById("n1").innerHTML = no[1]; break;
+						case 2: document.getElementById("n2").innerHTML = no[2]; break;
+						case 3: document.getElementById("n3").innerHTML = no[3]; break;
+					}
+					console.log("value of No " + no[num]);
+					flag[num] = false;
+				}
+				else {
+					opinion.noPer = function () { };
+					return;
+				}
+			}
+			yesPer(num) {
+				if (flag[num] == true) {
+					yes[num]++;
+					switch (num) {
+						case 0: document.getElementById("y0").innerHTML = yes[0]; break;
+						case 1: document.getElementById("y1").innerHTML = yes[1]; break;
+						case 2: document.getElementById("y2").innerHTML = yes[2]; break;
+						case 3: document.getElementById("y3").innerHTML = yes[3]; break;
+					}
+					console.log("value of Yes " + yes[num]);
+					flag[num] = false;
+				}
+				else {
+					opinion.noPer = function () { };
+					return;
+				}
+			}
+
+		}
+
+		my0 = new opinion();
+		my1 = new opinion();
+		my2 = new opinion();
+		my3 = new opinion();
+
+		function okay() {
+			document.getElementById("y0").innerHTML = yes[0];
+			document.getElementById("n0").innerHTML = no[0];
+			document.getElementById("y1").innerHTML = yes[1];
+			document.getElementById("n1").innerHTML = no[1];
+			document.getElementById("y2").innerHTML = yes[2];
+			document.getElementById("n2").innerHTML = no[2];
+			document.getElementById("y3").innerHTML = yes[3];
+			document.getElementById("n3").innerHTML = no[3];
+		}
+	</script>
+</head>
+
+<body onload="okay();">
+	<header id="grading">
+		<div class="container">
+			<div class="wrapper">
+				<div id="left_logo">
+					<a href="indexL.html"><img src="image/logo2.png" alt="logo" /></a>
+				</div>
+				<div id="nav_bar">
+					<ul>
+						<li><a href="indexL.html">HOME</a></li>
+						<li class="active"><a href="#">POLLING</a>
+							<ul>
+								<li><a href="garbage.html">WASTEPICK</a></li>
+								<li><a href="compet.html">COMPETITION</a></li>
+								<li><a href="reward.html">REWARD</a></li>
+							</ul>
+						</li>
+						<li><a href="index.html">LOGOUT</a></li>
+						<li><a href="about.html">ABOUT</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</header>
+
+	<section id="poll">
+		<div class="wrapper">
+			<div class="question light">
+				<h2>Which factor is more responsible to bring a change in climate, environment and landscape for the
+					last 100 years?</h2>
+				<table>
+					<form>
+						<tr>
+							<td><input type="button" id="yes" value="NATURE" onclick="my0.yesPer(0);" /></td>
+							<td><span id="y0"></span></td>
+							<td><input type="button" id="no" value="MANKIND" onclick="my0.noPer(0);" /></td>
+							<td><span id="n0"></span></td>
+						</tr>
+					</form>
+				</table>
+			</div>
+			<div class="question dark">
+				<h2>Gurugram, a city about 30km southwest of India's capital New Delhi, had the worst pollution levels
+					globally in 2018.</h2>
+				<table>
+					<tr>
+						<td><input type="button" id="yes" value="GOOD" onclick="my1.yesPer(1);" /></td>
+						<td><span id="y1"></span></td>
+						<td><input type="button" id="no" value="BAD" onclick="my1.noPer(1);" /></td>
+						<td><span id="n1"></span></td>
+					</tr>
+				</table>
+			</div>
+			<div class="question light">
+				<h2>According to reports, about 2,200 metric tonnes of garbage coming from east Delhi is dumped at the
+					landfill every day. Do we need Mountain of trash ?</h2>
+				<table>
+					<tr>
+						<td><input type="button" id="yes" value="RECYCLE IT" onclick="my2.yesPer(2);" /></td>
+						<td><span id="y2"></span></td>
+						<td><input type="button" id="no" value="NEED MORE" onclick="my2.noPer(2);" /></td>
+						<td><span id="n2"></span></td>
+					</tr>
+				</table>
+			</div>
+			<div class="question dark">
+				<h2>River Yamuna 'close to death': New study warns Delhi's waterway is 'toxic' even after treatment and
+					should not be used for drinking or irrigation. What we do ?</h2>
+				<table>
+					<tr>
+						<td><input type="button" id="yes" value="STAND" onclick="my3.yesPer(3);" /></td>
+						<td><span id="y3"></span></td>
+						<td><input type="button" id="no" value="WALKOUT" onclick="my3.noPer(3);" /></td>
+						<td><span id="n3"></span></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</section>
+
+	<div id="banner">
+		<div class="wrapper">
+			<h2>@ppy &copy 2022</h2>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+</body>
+
+</html>

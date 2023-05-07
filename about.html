@@ -1,0 +1,99 @@
+<html>
+
+<head>
+	<title>AboutUs</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		function validate() {
+			var mail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			var n = document.myabout.name.value;
+			if (!isNaN(n)) {
+				alert("Fill Proper Name");
+				return false;
+			}
+			if (!document.myabout.email.value.match(mail)) {
+				alert("Please Enter Valid Email-ID")
+				return false;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<header id="grading">
+		<div class="container">
+			<div class="wrapper">
+				<div id="left_logo">
+					<a href="indexL.html"><img src="image/logo2.png" alt="logo" /></a>
+				</div>
+				<div id="nav_bar">
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="facts.html">FACTS</a></li>
+						<li><a href="project.html">PROTECT</a></li>
+						<li class="active"><a href="about.html">ABOUT</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</header>
+
+	<section>
+		<div class="wrapper">
+			<div id="about">
+				<h1>What we do?</h1>
+				<p>
+					We are on the mission to clean our environment through this initiative.
+					Our litile initiative mainly works in slum and rural areas for waste
+					management. Next we are going to add the reward section or point system
+					for our users to encourage themselves towards clean earth. Under this a
+					competition section also which is functional for pictures and slogans
+					where we pick winner every week.
+				</p>
+				<h1>"Its our Duty to save environment Beauty"</h1>
+				<p>
+					Health & green environment is necessary for our future
+					generations. But now a days due to many pollution sources, the environment
+					is getting polluted and we must act to stop it. This is the only place for
+					human beings to live and therefore we must take care of it.
+				</p>
+				<p>
+					Campaigns are the best to way teach people about the benefits of a healthy
+					environment and also they should be told to try their best to keep it
+					clean and green.
+				</p>
+				<p><q>We request you to come and <a href="index.html">join</a> towards our
+						healthy environment.</q></p>
+			</div>
+
+			<div id="contact">
+				<form action="#" name="myabout" method="post" onsubmit="return validate();">
+					<h1>Contact Us</h1>
+					<table>
+						<tr><label for="name">Name</label></tr>
+						<tr><input type="text" id="name" name="name" placeholder="Your Name" autocomplete="off" /></tr>
+						<tr><label for="email">Email-Id</label></tr>
+						<tr><input type="text" id="email" name="email" placeholder="email@gmail.com"
+								autocomplete="off" /></tr>
+						<tr><label for="message">Message</label></tr>
+						<tr><textarea name="message" id="message" cols="20" rows="5" placeholder="type message or query"
+								autocomplete="off"></textarea></tr>
+						<tr><input type="submit" value="SEND" /></tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</section>
+
+	<div id="banner">
+		<div class="wrapper">
+			<h2>@ppy &copy 2022</h2>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+</body>
+
+</html>

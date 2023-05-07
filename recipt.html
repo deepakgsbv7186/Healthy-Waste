@@ -1,0 +1,101 @@
+<html>
+
+<head>
+	<title>Invoice Page</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		function checkscope() {
+			var my = "Confirm Pickup";
+			confirm(my);
+		}
+
+		function printcontent(e) {
+			var restorepage = document.body.innerHTML;
+			var prints = document.getElementById(e).innerHTML;
+			document.body.innerHTML = prints;
+			window.print();
+			document.body.innerHTML = restorepage;
+		}
+	</script>
+</head>
+
+<body onload="checkscope();">
+	<header id="grading">
+		<div class="container">
+			<div class="wrapper">
+				<div id="left_logo">
+					<a href="index.html"><img src="image/logo2.png" alt="logo" /></a>
+				</div>
+				<div id="nav_bar">
+					<ul>
+						<li><a href="indexL.html">HOME</a></li>
+						<li class="active"><a href="#">INVOICE</a>
+							<ul>
+								<li><a href="garbage.html">WASTEPICK</a></li>
+								<li><a href="poll.html">POLLING</a></li>
+								<li><a href="compet.html">COMPETITION</a></li>
+								<li><a href="reward.html">REWARD</a></li>
+							</ul>
+						</li>
+						<li><a href="index.html">LOGOUT</a></li>
+						<li><a href="about.html">ABOUT</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</header>
+
+	<div id="service">
+		<div class="wrapper">
+			<h1>Waste Pick Up Invoice</h1>
+			<table>
+				<tr>
+					<td><label for="ne">NAME:</label></td>
+					<td><span id="ne"></span></td>
+				</tr>
+				<tr>
+					<td><label for="ad">ADDRESS:</label></label></td>
+					<td><span id="ad"></span></td>
+				</tr>
+				<tr>
+					<td><label for="dd">DESCRIPTION:</label></td>
+					<td><span id="dd"></span></td>
+				</tr>
+				<tr>
+					<td><label for="we">WEIGHT(in Kg):</label></td>
+					<td><span id="we"></span></td>
+				</tr>
+				<tr>
+					<td><label for="ch">AMOUNT:</label></td>
+					<td>Rs. <span id="ch"></span></td>
+				</tr>
+			</table>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div id="p">
+		<input type="submit" value="Print Recipt" onclick="printcontent('service')" />
+		<div class="clear"></div>
+	</div>
+
+	<script>
+		document.getElementById("ne").innerHTML = localStorage.getItem("test1");
+		document.getElementById("ad").innerHTML = localStorage.getItem("test2");
+		document.getElementById("dd").innerHTML = localStorage.getItem("test4");
+		document.getElementById("we").innerHTML = localStorage.getItem("test5");
+		document.getElementById("ch").innerHTML = localStorage.getItem("test6");
+		localStorage.clear();
+	</script>
+
+	<div id="banner">
+		<div class="wrapper">
+			<h2>@ppy &copy 2022</h2>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<html>
+
+<head>
+	<title>Premium Home</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+
+		function passhero() {
+			var name = document.myhero.hero.value;
+			sessionStorage.clear();
+			sessionStorage.setItem("textvalue", name);
+			if (!isNaN(name)) {
+				alert("only name please!");
+				return;
+			}
+			else {
+				window.open("hero.html", "_blank");
+				return;
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+
+	<div id="showcaseL">
+		<div class="container">
+			<span id="up" title="Logout" onclick="location='index.html'"></span>
+			<div class="wrapper">
+				<div id="left_logo">
+					<a href="indexL.html"><img src="image/logo2.png" alt="logo" /></a>
+				</div>
+				<div id="nav_bar">
+					<ul>
+						<li class="active"><a href="indexL.html">HOME</a></li>
+						<li><a href="#">SERVICES</a>
+							<ul>
+								<li><a href="garbage.html">WASTEPICK</a></li>
+								<li><a href="poll.html">POLLING</a></li>
+								<li><a href="compet.html">COMPETITION</a></li>
+								<li><a href="reward.html">REWARD</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">ABOUT</a></li>
+						<li><a href="index.html">LOGOUT</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<h1>An Initiative for our Home</h1>
+			<p>
+				It is an opportunity for people to raise awareness about environment and give back to the community.
+				A clean environment can give a better life when you are retiring and it can help your children as well.
+			</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div id="banner">
+		<div class="wrapper">
+			<h1>Be an Environment Hero</h1>
+			<form name="myhero" method="post">
+				<input type="text" id="hero" name="hero" placeholder="Enter Your Name >>>" autocomplete="off" />
+				<input type="button" id="btn" value="For Earth" onclick="passhero();" />
+			</form>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+	<div class="heading">
+		<div class="box">
+			<h2>Understands the Types of Waste</h2>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<section>
+		<div class="wrapper">
+			<div class="box1">
+				<img src="image/liquid3.jpg" height="210px" alt="liquid garbage" />
+				<h3>Liquid</h3>
+				<p>
+					Waste can come in non-solid form. Some solid waste can also be converted to a liquid waste form for
+					disposal. It includes point source and non-point source discharges such as storm water and
+					wastewater. Examples of liquid waste include wash water from homes, liquids used for cleaning in
+					industries and waste detergents.
+				</p>
+			</div>
+			<div class="box2">
+				<img src="image/solid1.jpg" alt="solid garbage" />
+				<h3>Solid</h3>
+				<p>
+					Solid waste predominantly, is any garbage, refuse or rubbish that we make in our homes and other
+					places. These include old car tires, old newspapers, broken furniture and even food waste. They may
+					include any waste that is non-liquid.
+				</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</section>
+
+	<section>
+		<div class="wrapper">
+			<div class="box1">
+				<img src="image/organic2.jpg" alt="organic garbage" />
+				<h3>Organic</h3>
+				<p>
+					Organic waste comes from plants or animals sources. Commonly, they include food waste, fruit and
+					vegetable peels, flower trimmings and even dog poop can be classified as organic waste. They are
+					biodegradable (this means they are easily broken down by other organisms over time and turned into
+					manure). Many people turn their organic waste into compost and use them in their gardens.
+				</p>
+			</div>
+			<div class="box2">
+				<img src="image/recycle3.jpg" alt="recycle garbage" />
+				<h3>Recyclable</h3>
+				<p>
+					Recycling is processing used materials (waste) into new, useful products. This is done to reduce the
+					use of raw materials that would have been used. Waste that can be potentially recycled is termed
+					"Recyclable waste". Aluminum products (like soda, milk and tomato cans), Plastics (grocery shopping
+					bags, plastic bottles), Glass products (like wine and beer bottles, broken glass), Paper products
+					(used envelopes, newspapers and magazines, cardboard boxes) can be recycled and fall into this
+					category.
+				</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</section>
+
+	<div id="desk">
+		<div class="wrapper">
+			<img src="image/garbage1.jpg" alt="garbage separation">
+			<div class="clear"></div>
+		</div>
+	</div>
+
+	<div id="banner">
+		<div class="wrapper">
+			<h2>@ppy &copy 2022</h2>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<script>
+		document.getElementById("up").innerHTML = sessionStorage.getItem("un");
+	</script>
+
+</body>
+
+</html>

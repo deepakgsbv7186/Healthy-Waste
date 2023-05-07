@@ -1,0 +1,896 @@
+
+/* --------------------------------------------Home Page Starts ----------------------------------------------*/
+
+
+/* Gobal workings */
+*{
+	margin: 0;
+	padding: 0;
+  font-family: Helvetica,sans-serif;
+	
+}
+
+.clear{
+	clear: both;
+}
+.container{
+	/* background-color: lightskyblue; */
+	width: 100%;
+}
+
+.wrapper{
+	width: 90%;
+	margin: auto;
+}
+
+.light{
+	background: #1c8adb;
+}
+
+.dark{
+	 background: #39dc79;
+}
+
+ul li{
+	list-style-type: none;
+}
+ul li a{
+	text-decoration: none;
+	color: white;
+}
+
+
+
+/* header section */
+
+#left_logo{
+	display: inline-block;
+}
+#left_logo img{
+	width: 180px;
+	padding: 10px;
+}
+
+#nav_bar{
+	float: right;
+	width: 50%
+}
+
+#nav_bar ul:first-child{
+	margin-top: 40px;
+}
+
+#nav_bar ul li{
+	display: inline-block;
+	z-index: 10;
+	padding: 10px 0px 0px 20px;
+	position: relative;
+}
+
+#nav_bar ul ul{
+	display: none;
+	position: absolute;
+}
+
+#nav_bar ul ul li{
+	display: block;
+	margin-left: -20px;
+}
+
+#nav_bar ul li a{
+	font-size: 1.2em;
+	background-color: transparent;
+	color: white;
+	padding: 5px 20px;
+	transition: 0.6s;
+	border-radius: 8px;
+}
+
+#nav_bar ul li a:hover{
+	background-color: white;
+	color: black;
+}
+
+#nav_bar ul li:hover >ul{
+	display: block;
+}
+
+#nav_bar .active a{
+	background-color: white;
+	color: royalblue;
+	border-radius: 5px;
+}
+
+#nav_bar .active li a{
+	background-color: rgba(0, 0, 0, 0.3);
+	color: white;
+}
+
+#up{
+	background: linear-gradient(to top right ,green,yellow);
+	color: white;
+	border: none;
+	border-radius: 0px 0px 5px 50px;
+	padding: 15px;
+	box-shadow: 5px 5px 10px red; 
+	display: inline-block;
+	float: right;
+	cursor: pointer;
+}
+
+#clock,#date{
+	color: white;
+	font-weight: bold;
+	/* display: block; */
+	float: right;
+	padding: 5px;
+}
+
+/* cover page */
+
+#showcase{
+	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.6)),url('image/maincover.jpg') no-repeat;
+	background-size: cover;
+	height: 100vh;
+	background-position: center;
+	position: relative;
+	z-index: 5;
+
+}
+
+#showcase .container{
+	top: 7%;
+	position: relative;
+}
+
+#showcase .wrapper{
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-40%);
+}
+
+ #showcase .wrapper h1{
+	text-align: center;
+	font-size: 3.5em;
+	font-weight: 400;
+	padding-bottom: 50px;
+}
+
+#showcase .wrapper p{
+	width: 60%;
+	margin: 10px auto;
+	font-weight: 40;
+	font-size: 1.3em;
+	text-align: justify;
+}
+
+
+#showcaseL{
+	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.6)),url('image/earth.jpg') no-repeat;
+	background-size: cover;
+	height: 100vh;
+	background-position: center;
+	position: relative;
+	z-index: -5;
+}
+
+#showcaseL .wrapper{
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-70%);
+}
+
+ #showcaseL .wrapper h1{
+	text-align: center;
+	font-size: 3.5em;
+	font-weight: 400;
+	padding-bottom: 50px;
+}
+
+#showcaseL .wrapper p{
+	width: 60%;
+	margin: 10px auto;
+	font-weight: 40;
+	font-size: 1.3em;
+	text-align: justify;
+}
+
+
+/* Banner section For Hero */
+
+#banner{
+	background: linear-gradient(to left,red,blue);
+	height: 15%;
+}
+
+#banner .wrapper{
+	width: 80%;
+
+}
+
+#banner .wrapper h1{
+	float: left;
+	width: 40%;
+	padding-top: 30px;
+	font-size: 2.3em;
+	color: white;
+	text-align: center;
+
+}
+
+#banner .wrapper form{
+	float: right;
+	width: 40%;
+	padding-top: 25px;
+}
+
+#banner input[type="text"]
+{
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 8px;
+    margin: 11px auto;
+	display: inline;
+	text-align: center;
+	width: 60%;
+	height: 35%;
+    color: #fff;
+    font-size: 16px;
+}
+
+#banner .wrapper form #hero input{
+	
+	box-shadow: 5px 10px grey;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+#banner .wrapper form #btn{
+	margin: 10px auto;
+	display: inline;
+	width: 30%;
+	height: 35%;
+	border-radius: 8px;
+	text-align: center;
+	font-size: 1.2em;
+	color: black;
+	box-shadow: none;
+	outline: none;
+	border: none;
+	background: white;
+}
+
+
+
+/* Heading section */
+
+.heading{
+	/* margin: 20px auto; */
+	height: 10%;
+	padding: 30px;
+}
+
+.heading .box{
+	/* margin: 20px auto; */
+	text-align: center;
+	border-radius: 8px;
+	box-shadow: 5px 5px 10px grey;
+}
+
+.heading .box h2{
+	font-size: 2.3em;
+	margin-top: 10px;
+	border: none;
+	border-radius: 8px;
+	background: linear-gradient(to right,green,blue);
+	color: white;
+	padding: 10px;
+}
+
+
+
+/* article section */
+
+section img{
+	width: 80%;
+	margin: 20px;
+	border-radius: 8px;
+	box-shadow: 5px 5px 10px grey;
+}
+
+section p{
+	font-size: 1em;
+	text-align: justify;
+	padding-top: 20px;
+}
+
+section .wrapper{
+	width: 80%
+}
+
+section .wrapper .box1{
+	float: left;
+}
+
+section .wrapper .box2{
+	float: right;
+}
+
+section .wrapper .box1,.box2{
+	width: 40%;
+	padding: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+
+/* garbage separation */
+
+#desk{
+	margin: 30px auto;
+}
+
+#desk .wrapper{
+	text-align: center;
+	padding: 20px;
+}
+
+#desk .wrapper img{
+	width: 90%;
+	height: 80%;
+	border-radius: 8px;
+	box-shadow: 5px 5px 10px grey;
+}
+
+
+/* footer section */
+
+#banner .wrapper h2{
+	padding-top: 30px;
+	font-size: 2em;
+	color: white;
+	text-align: center;
+
+}
+
+/* --------------------------------------------End of HomePage ----------------------------------------------*/
+
+
+/* --------------------------------------------Login Page Starts ----------------------------------------------*/
+
+
+
+
+#login{
+	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.6)), url(image/image.jpg);
+    background-size: cover;
+    height: 80vh;
+    background-position: center;
+}
+
+#login .wrapper{
+	width: 30%;
+	/* margin: 20px auto; */
+	padding-top: 60px;
+}
+
+#login form{
+    width: 100%;
+    background: linear-gradient(to bottom right,yellow,green);
+    color: #fff;
+    /* top: 50%;
+    left: 50%; */
+    box-sizing: border-box;
+    border-radius: 6px;
+
+    padding: 50px 30px;
+}
+
+#login h1{
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 2em;
+}
+#login label{
+    font-weight: bold;
+}
+#login input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+#login input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+#login input[type="button"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1c8adb;
+    color: #fff;
+    font-size: 1.5em;
+    border-radius: 20px;
+}
+#login input[type="button"]:hover
+{
+    cursor: pointer;
+    background: #39dc79;
+    color: black;
+}
+
+/* --------------------------------------------Login Page Ends ----------------------------------------------*/
+
+
+/* --------------------------------------------Registration Page Starts ----------------------------------------------*/
+
+
+#register{
+	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.6)), url(image/image.jpg);
+    background-size: cover;
+    height: 160vh;
+    background-position: center;
+}
+
+#register .wrapper{
+	width: 45%;
+	padding-top: 60px;
+}
+
+#register form{
+    width: 100%;
+    background: linear-gradient(to bottom right,yellow,green);
+    color: #fff;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 20px 40px;
+}
+
+#register h1{
+    padding: 10px 0 40px 0;
+    text-align: center;
+    font-size: 2.2em;
+}
+#register form label{
+    font-weight: bold;
+}
+
+#register form input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#register #gender{
+	border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    color: black;
+    font-size: 16px;	
+}
+
+#register #pledge{
+	border: none;
+    background: transparent;
+    outline: none;
+    float: left;
+    width: 10%;
+    height: 20px;
+    color: black;
+    font-size: 16px;	
+}
+
+#register input[type="email"],#register input[type="password"],#register input[type="text"],#register input[type="textarea"],#register input[type="number"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+#register input[type="submit"],#register input[type="reset"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1c8adb;
+    color: #fff;
+    font-size: 1.5em;
+    border-radius: 20px;
+}
+
+#register input[type="submit"]:hover,#register input[type="reset"]:hover
+{
+    cursor: pointer;
+    background: #39dc79;
+    color: black;
+}
+
+
+/* --------------------------------------------Registration Page Ends ----------------------------------------------*/
+
+
+
+/* --------------------------------------------Garbage Page Starts ----------------------------------------------*/
+
+
+#garbagecal{
+	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.6)), url(image/image.jpg) no-repeat;
+    background-size: cover;
+    height: 90vh;
+    background-position: center;
+    padding-top: 50px; 
+}
+
+
+#garbagecal .wrapper{
+    width: 60%;
+    background: linear-gradient(to bottom right,yellow,green);
+    color: #fff;
+    box-sizing: border-box;
+    border-radius: 6px;	
+    padding: 50px 30px;
+}
+
+#garbagecal .wrapper .left{
+	float: left;
+}
+
+#garbagecal .wrapper .right{
+	float: right;
+	padding-top: 20%;
+	padding-left: 20px;
+	font-size: 2em;
+}
+
+#garbagecal .wrapper .right #sum{
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+#garbagecal h1{
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+#garbagecal table{
+	padding: 0px 50px 0px 20px;
+	
+}
+#garbagecal td{
+	padding: 5px;
+}
+
+#garbagecal label{
+    font-weight: bold;
+}
+
+#garbagecal input[type="text"],#garbagecal input[type="textarea"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    border-radius: 8px;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* #garbagecal ::placeholder{
+	color: skyblue;
+	line-height: 40px;
+} */
+
+#garbagecal #cond,#garbagecal #type{
+	border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    color: black;
+    font-size: 16px;	
+}
+
+#garbagecal input[type="reset"],#garbagecal input[type="button"],#garbagecal input[type="submit"]
+{
+    border: none;
+    outline: none;
+    padding: 5px;
+    background: #1c8adb;
+    color: #fff;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+
+#garbagecal input[type="reset"]:hover,#garbagecal input[type="button"]:hover,#garbagecal input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #39dc79;
+    color: black;
+}
+
+
+
+/* --------------------------------------------Garbage Page Starts ----------------------------------------------*/
+
+
+
+/* --------------------------------------------Recipt Page Starts ----------------------------------------------*/
+
+
+#service{
+	width: 100%;
+	margin: auto;
+	height: 60vh;
+}
+
+#service .wrapper{
+	width: 60%;
+	overflow: hidden;
+	margin: 40px auto;
+	text-align: center;
+}
+
+#service h1{
+	font-size: 2.5em;
+	text-align: center;
+}
+
+
+#service label,span{
+	font-size: 2em;
+
+}
+
+#service table{
+	margin: 15px auto;
+	border-top: 3px solid black;
+}
+#service td{
+	padding: 10px;
+}
+
+#p{
+	text-align: center;
+	padding: 20px;
+}
+#p input[type="submit"]
+{
+    border: none;
+    outline: none;
+    /* height: 40px; */
+    padding: 12px;
+    background: #1c8adb;
+    color: #fff;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+#p input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #39dc79;
+    color: black;
+}
+
+
+/* --------------------------------------------Recipt Page Ends ----------------------------------------------*/
+
+
+/* --------------------------------------------Fact Page Starts ----------------------------------------------*/
+
+
+#heading h1{
+	text-align: center;
+	font-size: 2.5em;
+	color: royalblue;
+	padding: 20px;
+	margin-top: 30px;
+	box-shadow: 5px 5px 10px grey;
+}
+
+
+/* --------------------------------------------Fact Page Ends ----------------------------------------------*/
+
+
+
+/* -------------------------------------------- Poll Page Starts ----------------------------------------------*/
+
+
+
+#poll .wrapper .question{
+	width: 80%;
+	/* background: #1c8adb; */
+	color: white;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 40px auto;
+}
+
+#poll .wrapper .question span{
+	padding: 10px;
+	font-size: 1.5em;
+}
+
+#poll .wrapper .question input[type="button"]
+{
+    border: none;
+    outline: none;
+    padding: 5px;
+    /* background: linear-gradient(to right,#39dc79,#1c8adb); */
+    color: black;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+#poll .wrapper .question input[type="button"]:hover{
+	cursor: pointer;
+    background: white;
+    color: black;
+}
+
+
+
+/* --------------------------------------------Poll Page Ends ----------------------------------------------*/
+
+
+
+/* -------------------------------------------- About Page Starts ----------------------------------------------*/
+
+
+section .wrapper #about{
+	width: 65%;
+	display: block;
+	float: left;
+}
+
+section .wrapper #about h1{
+	padding: 20px;
+    color: royalblue;
+    font-size: 2em;
+}
+
+section .wrapper #about p{
+	padding: 10px;
+	font-weight: 500;
+}
+
+section .wrapper #contact{
+	display: block;
+	width: 30%;
+	float: right;
+	background: linear-gradient(to bottom right,yellow,green);
+    color: #fff;
+    box-sizing: border-box;
+    border-radius: 6px;	
+    padding: 20px 30px;
+ 	margin: 30px 0px;
+}
+
+section .wrapper #contact h1{
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+section .wrapper #contact label{
+    font-weight: bold;
+}
+
+section .wrapper #contact input[type="text"],section .wrapper #contact textarea{
+	border: none;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+section .wrapper #contact input[type="text"]{
+	height: 40px;
+}
+
+section .wrapper #contact textarea{
+	resize: none;
+}
+
+section .wrapper #contact input[type="submit"]
+{
+    border: none;
+    outline: none;
+    padding: 5px;
+    background: #1c8adb;
+    color: #fff;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+
+section .wrapper #contact input[type="submit"]:hover{
+	cursor: pointer;
+    background: #39dc79;
+    color: black;
+}
+
+/* --------------------------------------------About Page Ends ----------------------------------------------*/
+
+
+
+/* --------------------------------------------Competition Page Starts --------------------------------------*/
+
+
+#compet .wrapper{
+	width: 60%;
+	text-align: center;
+	font-size: 4em;
+	color: royalblue;
+}
+
+
+/* --------------------------------------------Competition Page Ends -----------------------------------------*/
+
+
+
+/* --------------------------------------------Reward Page Starts -----------------------------------------*/
+
+
+
+#reward h1{
+	text-align: center;
+	font-size: 2.5em;
+	color: royalblue;
+	padding: 20px;
+	margin-top: 30px;
+	box-shadow: 5px 5px 10px grey;
+}
+
+#reward .wrapper{
+	width: 80%;
+	padding: 20px;
+	margin: 10px auto;
+}
+
+#reward .wrapper img{
+	display: block;
+	float: right;
+	width: 50%;
+	margin: 30px;
+	border-radius: 8px;
+	box-shadow: 5px 5px 10px grey;
+}
+
+#reward .wrapper ul{
+	margin-top: 20px;
+}
+
+#reward .wrapper li{
+	display: block;
+	float: left;
+	width: 40%;
+	padding: 15px;
+	font-size: 1.2em;
+	text-align: justify;
+}
+
+
+
+/* --------------------------------------------Reward Page Ends -----------------------------------------*/

@@ -1,0 +1,77 @@
+<html>
+	<head>
+	<title>Hero Page</title>
+		<style >
+			body{
+			margin: 0;
+			padding: 0;
+	        background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url('image/coverpage.jpg') no-repeat;
+	        background-size: cover;
+			height: 100vh;
+			/* background: #262626; */
+			}
+
+			p:first-child{
+			position: absolute;
+			top: 20%;
+			transform: translateY(-50%);
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			text-align: center;
+			font-size: 5em;
+			font-weight: 600;
+			font-family: sans-serif;
+			background: linear-gradient(to right,red,blue);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+			}
+
+			h1{
+			position: absolute;
+			top: 45%;
+			transform: translateY(-50%);
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			text-align: center;
+			font-size: 7em;
+			font-weight: 600;
+			text-transform: uppercase;
+			font-family: sans-serif;
+			background: linear-gradient(to right,red,blue);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+
+			}
+
+			p:last-of-type{
+			position: absolute;
+			top: 70%;
+			transform: translateY(-50%);
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			text-align: center;
+			font-size: 4em;
+			font-weight: 600;
+			font-family: sans-serif;
+			background: linear-gradient(to right,red,blue);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+			}
+		</style>		
+	</head>
+	
+	<body>
+		<p>Good Work !</p>
+		<h1 id="result"></h1>
+		<p>
+		Be Your Own Environmental Hero: Fresh Strategies without the Politics!!
+		</p>
+		<script>
+			document.getElementById("result").innerHTML=sessionStorage.getItem("textvalue");
+		</script>	
+
+	</body>
+</html>

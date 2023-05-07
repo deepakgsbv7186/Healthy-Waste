@@ -1,0 +1,149 @@
+<html>
+
+<head>
+	<title>Waste Collection</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		var ty = new Array();
+		ty["home"] = 0;
+		ty["shop"] = 1;
+		var con = new Array();
+		con["dry"] = 3;
+		con["wet"] = 5;
+		con["elec"] = 0;
+		con["chem"] = 8;
+		var total = 0;
+		function cal() {
+			var theForm = document.forms["garbage"];
+			var selectedType = theForm.elements["type"];
+			var selectedCond = theForm.elements["cond"];
+			var weightValue = Number(document.getElementById("weight").value);
+			// console.log(Math.floor(weightValue));
+			if (ty[selectedType.value] == 0)
+				total = con[selectedCond.value] * weightValue;
+			else
+				total = 2 * con[selectedCond.value] * weightValue;
+			document.getElementById("sum").innerHTML = "Rs. " + total.toFixed(2);
+		}
+
+		function disp() {
+			localStorage.clear();
+			localStorage.setItem("test1", document.getElementById("name").value);
+			localStorage.setItem("test2", document.getElementById("address").value);
+			localStorage.setItem("test4", document.getElementById("about").value);
+			localStorage.setItem("test5", document.getElementById("weight").value);
+			localStorage.setItem("test6", total);
+			return false;
+		}
+
+		function validate() {
+			var n = document.myGarbage.name.value;
+			var w = /^[0-9]+$/;
+			if (!isNaN(n)) {
+				alert("Fill Proper Name");
+				return false;
+			}
+			if (!document.myGarbage.weight.value.match(w)) {
+				alert("Weight should be round-off value and must positive.");
+				return false;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<header id="grading">
+		<div class="container">
+			<div class="wrapper">
+				<div id="left_logo">
+					<a href="indexL.html"><img src="image/logo2.png" alt="logo" /></a>
+				</div>
+				<div id="nav_bar">
+					<ul>
+						<li><a href="indexL.html">HOME</a></li>
+						<li class="active"><a href="#">WASTEPICK</a>
+							<ul>
+								<li><a href="poll.html">POLLING</a></li>
+								<li><a href="compet.html">COMPETITION</a></li>
+								<li><a href="reward.html">REWARD</a></li>
+							</ul>
+						</li>
+						<li><a href="index.html">LOGOUT</a></li>
+						<li><a href="about.html">ABOUT</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</header>
+
+	<div id="garbagecal">
+		<div class="wrapper">
+			<div class="left">
+				<h1>Waste Pickup Form</h1>
+				<form id="garbage" name="myGarbage" action="recipt.html" onsubmit="return validate();">
+					<table style="border-right:1px solid black">
+						<tr>
+							<td><label for="name">Name</label></td>
+							<td><input type="text" name="name" id="name" placeholder="full name" autocomplete="off" />
+							</td>
+						</tr>
+						<tr colspan="">
+							<td><label for="type">Type of Garbage</label></td>
+							<td>
+								<select name="type" id="type">
+									<option value="home">Home</option>
+									<option value="shop">Shop</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="cond">Condition</label></td>
+							<td><select name="cond" id="cond">
+									<option value="dry">Dry</option>
+									<option value="wet">Wet</option>
+									<option value="elec">Electronic</option>
+									<option value="chem">Chemical</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="weight">Weight</label></td>
+							<td><input type="text" name="weight" id="weight" placeholder="in kilograms"
+									autocomplete="off" required /></td>
+						</tr>
+						<tr>
+							<td><label for="about">Description</label></td>
+							<td><input type="textarea" id="about" placeholder="about garbage" autocomplete="off" /></td>
+						</tr>
+						<tr>
+							<td><label for="address">Address</label></td>
+							<td><input type="textarea" name="address" id="address" placeholder="full address"
+									autocomplete="off" /></td>
+						</tr>
+						<tr>
+							<td><input type="reset" value="Reset"></td>
+							<td><input type="button" id="ca" value="Calculate" onclick="cal();" /></td>
+							<td><input type="submit" value="Pickup" onclick="disp();" /></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="right">
+				<label for="sum">Charges</label>
+				<h1 id="sum"></h1>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+	<div id="banner">
+		<div class="wrapper">
+			<h2>@ppy &copy 2022</h2>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+</body>
+
+</html>
